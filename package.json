@@ -1,0 +1,53 @@
+{
+    "name": "densho",
+    "private": false,
+    "version": "0.0.0",
+    "description": "Japanese dictionary",
+    "type": "module",
+    "main": "main.tsx",
+    "engineStrict": true,
+    "engines": {
+        "node": "21"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx}\" --report-unused-disable-directives --max-warnings=0",
+        "style-lint": "npx stylelint **/*.css",
+        "check": "tsc --noEmit",
+        "test": "vitest run --passWithNoTests",
+        "prepare": "husky"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.1.1",
+        "@stylistic/eslint-plugin": "^1.7.2",
+        "@stylistic/eslint-plugin-js": "^1.7.2",
+        "@stylistic/eslint-plugin-ts": "^1.7.2",
+        "@types/react": "^18.3.1",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/eslint-plugin": "^7.8.0",
+        "@typescript-eslint/parser": "^7.8.0",
+        "@vitejs/plugin-react": "^4.2.1",
+        "autoprefixer": "^10.4.19",
+        "eslint": "^8.57.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-optional-params": "^0.0.5",
+        "eslint-plugin-react": "^7.34.1",
+        "husky": "^9.0.11",
+        "postcss-nested": "^6.0.1",
+        "postcss-simple-vars": "^7.0.1",
+        "stylelint": "^16.4.0",
+        "stylelint-config-standard": "^36.0.0",
+        "typescript": "^5.4.5",
+        "typescript-eslint": "^7.8.0",
+        "vite": "^5.2.10",
+        "vitest": "^1.5.3"
+    },
+    "dependencies": {
+        "classnames": "^2.5.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "author": "WI",
+    "license": "MIT"
+}
