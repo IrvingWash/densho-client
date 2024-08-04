@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import { TopPanel } from "./hardware/top-panel/top-panel";
+import { DictionaryScreen } from "./screens/dictionary-screen/dictionary-screen";
 
 export function renderGui(): void {
     const rootElement = document.getElementById("root");
@@ -14,7 +14,7 @@ export function renderGui(): void {
 
     root.render(
         <StrictMode>
-            <TopPanel />
+            <DictionaryScreen />
         </StrictMode>,
     );
 }

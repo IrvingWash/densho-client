@@ -1,4 +1,4 @@
-import { renderGui } from "./renderer";
 import "./index.css";
+import { renderGui } from "./renderer";
 
 renderGui();
