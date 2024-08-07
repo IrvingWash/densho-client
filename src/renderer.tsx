@@ -1,8 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import { DictionaryScreen } from "./screens/dictionary-screen/dictionary-screen";
-
 export function renderGui(): void {
     const rootElement = document.getElementById("root");
 
@@ -14,7 +12,7 @@ export function renderGui(): void {
 
     root.render(
         <StrictMode>
-            <DictionaryScreen />
+            <div>Hello, world</div>
         </StrictMode>,
     );
 }
