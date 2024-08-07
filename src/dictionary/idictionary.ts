@@ -1,7 +1,8 @@
-import { DictionaryEntry } from "./dictionary-entry";
+import { DictionaryEntry, DictionaryEntryPayload } from "./dictionary-entry";
 
 export interface IDictionary {
     entries(): readonly DictionaryEntry[];
-    addEntry(newEntry: DictionaryEntry): void;
-    removeEntry(entryToRemove: DictionaryEntry): void;
+    addEntry(newEntry: DictionaryEntryPayload): void;
+    removeEntry(id: string): void;
+    updateEntry(id: string, updatedEntry: DictionaryEntryPayload): void;
 }

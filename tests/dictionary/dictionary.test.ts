@@ -6,13 +6,17 @@ describe("Dictionary", () => {
     const entries: DictionaryEntry[] = [
         {
             kanji: "僕の夏休み",
-            hiragana: "ぼくのなつやすみ",
+            kana: "ぼくのなつやすみ",
             translation: "My summer break",
+            createdAt: 123,
+            id: "1",
         },
         {
             kanji: "隣のトトロ",
-            hiragana: "となりのととろ",
+            kana: "となりのととろ",
             translation: "My neighbor Totoro",
+            createdAt: 123,
+            id: "2",
         },
     ];
 
@@ -28,7 +32,7 @@ describe("Dictionary", () => {
 
         dictionary.addEntry({
             kanji: "花火",
-            hiragana: "はなび",
+            kana: "はなび",
             translation: "Fireworks",
         });
 
@@ -41,11 +45,11 @@ describe("Dictionary", () => {
 
         dictionary.addEntry({
             kanji: "花火",
-            hiragana: "はなび",
+            kana: "はなび",
             translation: "Fireworks",
         });
 
-        dictionary.removeEntry(entries[1]);
+        dictionary.removeEntry("2");
 
         expect(dictionary.entries().length).toEqual(2);
 

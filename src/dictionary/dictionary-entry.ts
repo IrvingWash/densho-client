@@ -1,11 +1,12 @@
-export interface DictionaryEntry {
+interface DictionaryEntryBase {
     kanji: string | null;
-    hiragana: string | null;
+    kana: string | null;
     translation: string;
 }
 
-export function isSameDictionaryEntry(a: DictionaryEntry, b: DictionaryEntry): boolean {
-    return a.kanji === b.kanji
-        && a.hiragana === b.hiragana
-        && a.translation === b.translation;
+export interface DictionaryEntry extends DictionaryEntryBase {
+    id: string;
+    createdAt: number;
 }
+
+export interface DictionaryEntryPayload extends DictionaryEntryBase {}

@@ -1,0 +1,50 @@
+.container {
+    margin: 50px auto;
+    width: 500px;
+}
+
+.title {
+    background-color: rgb(2, 0, 3);
+    color: $color-old-screen;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.entry {
+    margin-bottom: 20px;
+}
+
+.entryHeading {
+    font-weight: bold;
+}
+
+.entryLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.japanese {
+    padding: 0 3px;
+    background-color: rgb(2, 0, 3);
+    color: $color-old-screen;
+}
+
+.addButton {
+    margin-bottom: 10px;
+    background-color: rgb(2, 0, 3);
+    border: 1px solid transparent;
+    color: $color-old-screen;
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: $color-old-screen;
+    color: rgb(2, 0, 3);
+    border: 1px solid rgb(2, 0, 3);
+}
+
+.addButton:active {
+    border-style: dashed;
+}
