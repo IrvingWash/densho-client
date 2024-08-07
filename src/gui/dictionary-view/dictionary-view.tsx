@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { useObservable } from "@utils/observable";
+import { ControlButton } from "@ui-kit/components/control-button/control-button";
 import { IDictionaryViewModel } from "./idictionary-view-model";
 import { AddEntryView } from "./add-entry/add-entry-view";
 import s from "./dictionary-view.module.css";
@@ -18,9 +19,9 @@ export function DictionaryView(props: DictionaryViewProps): JSX.Element {
             <div className={ s.entries}>
                 { renderEntries() }
             </div>
-            <button className={ s.addButton } onClick={ onAddClick }>
+            <ControlButton className={ s.editButton } onClick={ onAddClick }>
                 { editMode ? "Cancel" : "Add" }
-            </button>
+            </ControlButton>
             { editMode &&
                 <AddEntryView model={ props.model.addEntryViewModel() } />
             }

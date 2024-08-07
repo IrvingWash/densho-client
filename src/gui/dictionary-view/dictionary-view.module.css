@@ -1,6 +1,6 @@
 .container {
     margin: 50px auto;
-    width: 500px;
+    width: 700px;
 }
 
 .title {
@@ -12,6 +12,8 @@
 
 .entry {
     margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(2, 0, 3);
 }
 
 .entryHeading {
@@ -23,28 +25,12 @@
     justify-content: space-between;
 }
 
+.editButton {
+    margin-bottom: 20px;
+}
+
 .japanese {
     padding: 0 3px;
-    background-color: rgb(2, 0, 3);
+    background-color: $color-monochrome-black;
     color: $color-old-screen;
-}
-
-.addButton {
-    margin-bottom: 10px;
-    background-color: rgb(2, 0, 3);
-    border: 1px solid transparent;
-    color: $color-old-screen;
-    width: 100px;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.addButton:hover {
-    background-color: $color-old-screen;
-    color: rgb(2, 0, 3);
-    border: 1px solid rgb(2, 0, 3);
-}
-
-.addButton:active {
-    border-style: dashed;
 }

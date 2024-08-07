@@ -1,0 +1,11 @@
+.wordInput {
+    padding: 2px 5px;
+    border: 1px solid $color-monochrome-black;
+    border-radius: 0;
+    background-color: $color-old-screen;
+    font-size: inherit;
+}
+
+.wordInput:focus {
+    outline: 1px solid $color-monochrome-black;
+}

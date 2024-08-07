@@ -12,4 +12,5 @@ html, body, #root {
 body {
     background-color: $color-old-screen;
     font-family: "Roboto", sans-serif;
+    font-size: 24px;
 }

@@ -1,0 +1,19 @@
+.controlButton {
+    background-color: $color-monochrome-black;
+    border: 1px solid transparent;
+    color: $color-old-screen;
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.controlButton:hover {
+    background-color: $color-old-screen;
+    color: $color-monochrome-black;
+    border: 1px solid $color-monochrome-black;
+}
+
+.controlButton:active {
+    border-style: dashed;
+}

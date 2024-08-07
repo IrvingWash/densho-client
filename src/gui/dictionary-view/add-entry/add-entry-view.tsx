@@ -1,6 +1,9 @@
-import { useObservable } from "@utils/observable";
-import { IAddEntryViewModel } from "./iadd-entry-view-model";
 import { ChangeEvent } from "react";
+import { useObservable } from "@utils/observable";
+import { ControlButton } from "@ui-kit/components/control-button/control-button";
+import { IAddEntryViewModel } from "./iadd-entry-view-model";
+import s from "./add-entry-view.module.css";
+import { WordInput } from "@ui-kit/components/word-input/word-input";
 
 interface AddEntryViewProps {
     model: IAddEntryViewModel;
@@ -12,23 +15,24 @@ export function AddEntryView(props: AddEntryViewProps): JSX.Element {
     const translation = useObservable(props.model.translation$);
 
     return (
-        <form onSubmit={ onSubmit }>
-            <input
+        <form className={ s.container } onSubmit={ onSubmit }>
+            <WordInput
                 value={ kanji ?? "" }
                 placeholder="Kanji"
                 onChange={ onKanjiInputChange }
+                autoFocus
             />
-            <input
+            <WordInput
                 value={ kana ?? "" }
                 placeholder="Kana"
                 onChange={ onKanaInputChange }
             />
-            <input
+            <WordInput
                 value={ translation }
                 placeholder="Translation"
                 onChange={ onTranslationInputChange }
             />
-            <button type="submit">Add</button>
+            <ControlButton type="submit">Submit</ControlButton>
         </form>
     );
 
