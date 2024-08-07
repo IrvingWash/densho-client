@@ -1,7 +1,12 @@
-import { DictionaryEntry } from "./dictionary-entry";
+import { DictionaryEntry, isSameDictionaryEntry } from "./dictionary-entry";
+import { IDictionary } from "./idictionary";
 
-export class Dictionary {
-    private _entries: DictionaryEntry[] = [];
+export class Dictionary implements IDictionary {
+    private _entries: DictionaryEntry[];
+
+    public constructor(entries: DictionaryEntry[]) {
+        this._entries = [...entries];
+    }
 
     public entries(): readonly DictionaryEntry[] {
         return this._entries;
@@ -13,19 +18,7 @@ export class Dictionary {
 
     public removeEntry(entryToRemove: DictionaryEntry): void {
         this._entries = this._entries.filter(
-            (entry) => entryToRemove.id !== entry.id,
+            (entry) => !isSameDictionaryEntry(entry, entryToRemove),
         );
-    }
-
-    public updateEntry(updatedEntry: DictionaryEntry): void {
-        const entryToUpdateId = this._entries.findIndex(
-            (entry) => entry.id === updatedEntry.id,
-        );
-
-        if (entryToUpdateId === -1) {
-            return;
-        }
-
-        this._entries[entryToUpdateId] = { ...updatedEntry };
     }
 }
